@@ -27,7 +27,10 @@
     <ClInclude Include="dependences\includes\glad\glad.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="src\clases\headers\initial_config.h">
+    <ClInclude Include="src\clases\headers\initial_configurations.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enumerators\status_corroboration_enum.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,7 +41,7 @@
     <ClCompile Include="src\c-files\glad.c">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\clases\implementations\initial_config.cpp">
+    <ClCompile Include="src\clases\implementations\initial_configurations.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
