@@ -4,10 +4,12 @@
 
 //For this project I downloaded glad for opengl version 3.3
 //Web GLAD: https://glad.dav1d.de/
-#include <glad/glad.h>
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 #include "../../enumerators/status_corroboration_enum.h"
+#include "../../callback-functions/callback_functions.h"
 
 using namespace std;
 
@@ -80,4 +82,14 @@ namespace LearnOpenGL
 			return StatusCorroborationEnum::SUCCEDED;
 		}
 	}
+
+	void InitialConfigurations::initialOpenGLRenderingWindowSize()
+	{
+		glViewport(0, 0, GLViewportWidth, GLViewportHeight);
+	}
+
+	void InitialConfigurations::registerCallbackFuntions(GLFWwindow* window)
+	{
+		glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	}			
 }

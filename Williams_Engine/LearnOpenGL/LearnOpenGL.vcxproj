@@ -157,12 +157,18 @@
     <ClInclude Include="dependences\includes\GLFW\glfw3.h" />
     <ClInclude Include="dependences\includes\GLFW\glfw3native.h" />
     <ClInclude Include="dependences\includes\KHR\khrplatform.h" />
+    <ClInclude Include="src\callback-functions\callback_functions.h" />
     <ClInclude Include="src\clases\headers\initial_configurations.h" />
+    <ClInclude Include="src\clases\headers\program.h" />
+    <ClInclude Include="src\clases\headers\window.h" />
     <ClInclude Include="src\enumerators\status_corroboration_enum.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\c-files\glad.c" />
+    <ClCompile Include="src\callback-functions\callback_functions.cpp" />
     <ClCompile Include="src\clases\implementations\initial_configurations.cpp" />
+    <ClCompile Include="src\clases\implementations\program.cpp" />
+    <ClCompile Include="src\clases\implementations\window.cpp" />
     <ClCompile Include="src\main\main.cpp" />
   </ItemGroup>
   <ItemGroup>
