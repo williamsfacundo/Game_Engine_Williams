@@ -5,6 +5,7 @@
 #include "../headers/initial_configurations.h"
 #include "../../enumerators/status_corroboration_enum.h"
 #include "../headers/window.h"
+#include "../headers/input_utilities.h"
 
 using namespace std;
 
@@ -30,7 +31,7 @@ namespace LearnOpenGL
 		}
 	}
 
-	StatusCorroborationEnum  Program::initialize()
+	StatusCorroborationEnum Program::initialize()
 	{
 		//Initialization phase 1
 		InitialConfigurations* initialConfigs = new InitialConfigurations();
@@ -74,10 +75,17 @@ namespace LearnOpenGL
 		freeResourcesAtEnd();
 	}
 
+	void Program::frameInput()
+	{
+		InputUtilities::closeWindowOnKeyPress(window->getWindow(), CloseWindowKey);
+	}
+
 	void Program::renderLoop()
 	{
 		while (!glfwWindowShouldClose(window->getWindow()))
 		{
+			frameInput();
+
 			glfwSwapBuffers(window->getWindow());
 
 			glfwPollEvents();
