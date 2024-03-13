@@ -75,16 +75,36 @@ namespace LearnOpenGL
 		freeResourcesAtEnd();
 	}
 
+	void Program::clearScreenCommands()
+	{
+		glClearColor(
+			window->getClearScreenColor().r, 
+			window->getClearScreenColor().g, 
+			window->getClearScreenColor().b, 
+			window->getClearScreenColor().a);
+		
+		glClear(GL_COLOR_BUFFER_BIT);
+	}
+
 	void Program::frameInput()
 	{
 		InputUtilities::closeWindowOnKeyPress(window->getWindow(), CloseWindowKey);
+	}
+
+	void Program::renderCommands()
+	{
+
 	}
 
 	void Program::renderLoop()
 	{
 		while (!glfwWindowShouldClose(window->getWindow()))
 		{
+			clearScreenCommands();
+
 			frameInput();
+
+			renderCommands();
 
 			glfwSwapBuffers(window->getWindow());
 

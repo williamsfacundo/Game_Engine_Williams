@@ -163,6 +163,7 @@
     <ClInclude Include="src\clases\headers\program.h" />
     <ClInclude Include="src\clases\headers\window.h" />
     <ClInclude Include="src\enumerators\status_corroboration_enum.h" />
+    <ClInclude Include="src\struct\color_struct.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\c-files\glad.c" />

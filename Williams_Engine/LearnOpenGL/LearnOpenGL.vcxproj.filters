@@ -45,6 +45,9 @@
     <ClInclude Include="src\clases\headers\input_utilities.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="src\struct\color_struct.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\main.cpp">

@@ -6,6 +6,7 @@
 #include <glad/glad.h>
 
 #include "../../enumerators/status_corroboration_enum.h"
+#include "../../struct/color_struct.h"
 
 namespace LearnOpenGL
 {
@@ -18,6 +19,8 @@ namespace LearnOpenGL
 
 		const char* WindowTitle = "LearnOpenGL";
 
+		const MyColor clearScreenColor = MyColor(0.2f, 0.3f, 0.3f, 1.0f);
+
 		GLFWwindow* window;
 
 	public:
@@ -27,6 +30,8 @@ namespace LearnOpenGL
 		StatusCorroborationEnum createWindow();
 
 		GLFWwindow* getWindow();
+
+		MyColor getClearScreenColor();
 	};
 }
 

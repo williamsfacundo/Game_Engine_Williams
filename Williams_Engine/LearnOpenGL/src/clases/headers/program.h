@@ -24,7 +24,11 @@ namespace LearnOpenGL
 		
 		void renderingExecution();
 
+		void clearScreenCommands();
+
 		void frameInput();
+
+		void renderCommands();
 
 		void renderLoop();
 

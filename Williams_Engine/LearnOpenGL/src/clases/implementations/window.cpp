@@ -44,4 +44,9 @@ namespace LearnOpenGL
 	{
 		return window;
 	}
+
+	MyColor Window::getClearScreenColor()
+	{
+		return clearScreenColor;
+	}
 }
