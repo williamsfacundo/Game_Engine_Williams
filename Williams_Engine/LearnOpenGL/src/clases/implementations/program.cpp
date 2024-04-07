@@ -62,6 +62,8 @@ namespace LearnOpenGL
 
 		initialConfigs->initialOpenGLRenderingWindowSize(window);
 
+		initialConfigs->showMaxVertexAttributesAvailable();
+
 		if (initialConfigs != nullptr)
 		{
 			delete initialConfigs;

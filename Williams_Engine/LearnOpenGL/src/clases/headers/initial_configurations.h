@@ -31,6 +31,8 @@ namespace LearnOpenGL
 		void initialOpenGLRenderingWindowSize(Window* programWindow);
 
 		void registerCallbackFunctions(GLFWwindow* window);
+
+		void showMaxVertexAttributesAvailable();
 	};
 }
 

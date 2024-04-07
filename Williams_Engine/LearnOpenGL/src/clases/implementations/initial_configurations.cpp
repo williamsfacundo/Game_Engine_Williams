@@ -93,4 +93,13 @@ namespace LearnOpenGL
 	{
 		glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 	}			
+
+	void InitialConfigurations::showMaxVertexAttributesAvailable()
+	{
+		int attributes;
+
+		glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &attributes);
+
+		cout << "Maximum number of vertex attributes supported: " << attributes << endl;
+	}
 }

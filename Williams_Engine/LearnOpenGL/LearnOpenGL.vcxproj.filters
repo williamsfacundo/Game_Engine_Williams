@@ -48,6 +48,15 @@
     <ClInclude Include="src\struct\color_struct.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="src\clases\headers\shader_program.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clases\headers\Objects\2D\triangle.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enumerators\shader_type_enum.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\main.cpp">
@@ -69,6 +78,12 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="src\clases\implementations\input_utilities.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\clases\implementations\shader_program.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\clases\implementations\Objects\2D\triangle.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
