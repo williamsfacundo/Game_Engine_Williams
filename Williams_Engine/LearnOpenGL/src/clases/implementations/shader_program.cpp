@@ -30,7 +30,7 @@ namespace LearnOpenGL
 
 	}
 
-	StatusCorroborationEnum ShaderProgram::getSourceCodeFromFilePath(const char* shaderFilePath, const char* resultingShaderCode)
+	StatusCorroborationEnum ShaderProgram::getSourceCodeFromFilePath(const char* shaderFilePath, const char* &resultingShaderCode)
 	{
 		string code;
 

@@ -11,7 +11,7 @@ namespace LearnOpenGL
 	private:
 		unsigned int programID;
 
-		StatusCorroborationEnum getSourceCodeFromFilePath(const char* shaderFilePath, const char* resultingShaderCode);
+		StatusCorroborationEnum getSourceCodeFromFilePath(const char* shaderFilePath, const char* &resultingShaderCode);
 
 		void shaderCompilation(unsigned int& shaderID, ShaderTypeEnum shaderType, const char* shaderSourceCode);
 
