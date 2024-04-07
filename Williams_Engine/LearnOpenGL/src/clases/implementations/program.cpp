@@ -60,6 +60,8 @@ namespace LearnOpenGL
 
 		initialConfigs->registerCallbackFuntions(window->getWindow());
 
+		initialConfigs->initialOpenGLRenderingWindowSize(window);
+
 		if (initialConfigs != nullptr)
 		{
 			delete initialConfigs;
@@ -124,8 +126,7 @@ namespace LearnOpenGL
 			cout << "We are so sorry, program could not execute properly!" << endl;
 		}
 		else
-		{
-			window->getWindow();
+		{			
 			renderingExecution();
 		}
 	}

@@ -83,9 +83,10 @@ namespace LearnOpenGL
 		}
 	}
 
-	void InitialConfigurations::initialOpenGLRenderingWindowSize()
+	void InitialConfigurations::initialOpenGLRenderingWindowSize(Window* programWindow)
 	{
-		glViewport(0, 0, GLViewportWidth, GLViewportHeight);
+		glViewport(0, 0, programWindow->getWidth(), programWindow->getHeight());
+
 	}
 
 	void InitialConfigurations::registerCallbackFuntions(GLFWwindow* window)

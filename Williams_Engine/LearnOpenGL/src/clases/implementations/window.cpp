@@ -45,6 +45,16 @@ namespace LearnOpenGL
 		return window;
 	}
 
+	int Window::getHeight()
+	{
+		return WindowHeight;
+	}
+
+	int Window::getWidth()
+	{
+		return WindowWidth;
+	}
+
 	MyColor Window::getClearScreenColor()
 	{
 		return clearScreenColor;

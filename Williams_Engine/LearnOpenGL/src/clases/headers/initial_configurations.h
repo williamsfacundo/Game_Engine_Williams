@@ -2,6 +2,7 @@
 #define INITIAL_CONFIGURATIONS
 
 #include "../../enumerators/status_corroboration_enum.h"
+#include "../../clases/headers/window.h"
 
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
@@ -13,10 +14,7 @@ namespace LearnOpenGL
 	{
 	private:
 		const int OpenGLMinorVersion = 3;
-		const int OpenGLMajorVersion = 3;
-
-		const int GLViewportWidth = 800;
-		const int GLViewportHeight = 600;
+		const int OpenGLMajorVersion = 3;		
 
 		void configurateOpenGLParameters();
 
@@ -30,7 +28,7 @@ namespace LearnOpenGL
 
 		StatusCorroborationEnum initializeGLAD();
 
-		void initialOpenGLRenderingWindowSize();
+		void initialOpenGLRenderingWindowSize(Window* programWindow);
 
 		void registerCallbackFuntions(GLFWwindow* window);
 	};

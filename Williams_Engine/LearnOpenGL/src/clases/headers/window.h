@@ -30,6 +30,10 @@ namespace LearnOpenGL
 		StatusCorroborationEnum createWindow();
 
 		GLFWwindow* getWindow();
+		
+		int getHeight();
+
+		int getWidth();
 
 		MyColor getClearScreenColor();
 	};
