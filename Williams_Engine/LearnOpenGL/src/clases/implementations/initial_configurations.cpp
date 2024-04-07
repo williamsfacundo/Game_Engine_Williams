@@ -89,7 +89,7 @@ namespace LearnOpenGL
 
 	}
 
-	void InitialConfigurations::registerCallbackFuntions(GLFWwindow* window)
+	void InitialConfigurations::registerCallbackFunctions(GLFWwindow* window)
 	{
 		glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 	}			

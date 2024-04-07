@@ -30,7 +30,7 @@ namespace LearnOpenGL
 
 		void initialOpenGLRenderingWindowSize(Window* programWindow);
 
-		void registerCallbackFuntions(GLFWwindow* window);
+		void registerCallbackFunctions(GLFWwindow* window);
 	};
 }
 

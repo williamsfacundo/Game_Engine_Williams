@@ -58,7 +58,7 @@ namespace LearnOpenGL
 			return StatusCorroborationEnum::FAILED;
 		}
 
-		initialConfigs->registerCallbackFuntions(window->getWindow());
+		initialConfigs->registerCallbackFunctions(window->getWindow());
 
 		initialConfigs->initialOpenGLRenderingWindowSize(window);
 
