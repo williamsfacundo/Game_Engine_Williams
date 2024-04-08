@@ -8,6 +8,8 @@
 #include "../headers/initial_configurations.h"
 #include "../../enumerators/status_corroboration_enum.h"
 #include "../headers/window.h"
+#include "../headers/shaders_manager.h"
+#include "../headers/Objects/2D/triangle.h"
 
 namespace LearnOpenGL
 {
@@ -18,7 +20,11 @@ namespace LearnOpenGL
 
 		InitialConfigurations* initialConfigs;
 
-		Window* window;	
+		Window* window;
+
+		ShaderManager* shaderManager;
+
+		Triangle* triangle;
 
 		StatusCorroborationEnum initialize();
 		

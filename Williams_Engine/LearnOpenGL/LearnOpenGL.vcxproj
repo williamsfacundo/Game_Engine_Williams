@@ -162,6 +162,7 @@
     <ClInclude Include="src\clases\headers\input_utilities.h" />
     <ClInclude Include="src\clases\headers\Objects\2D\triangle.h" />
     <ClInclude Include="src\clases\headers\program.h" />
+    <ClInclude Include="src\clases\headers\shaders_manager.h" />
     <ClInclude Include="src\clases\headers\shader_program.h" />
     <ClInclude Include="src\clases\headers\window.h" />
     <ClInclude Include="src\enumerators\shader_type_enum.h" />
@@ -175,12 +176,17 @@
     <ClCompile Include="src\clases\implementations\input_utilities.cpp" />
     <ClCompile Include="src\clases\implementations\Objects\2D\triangle.cpp" />
     <ClCompile Include="src\clases\implementations\program.cpp" />
+    <ClCompile Include="src\clases\implementations\shaders_manager.cpp" />
     <ClCompile Include="src\clases\implementations\shader_program.cpp" />
     <ClCompile Include="src\clases\implementations\window.cpp" />
     <ClCompile Include="src\main\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="dependences\lib\glfw3.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\shader.fs" />
+    <None Include="shaders\shader.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

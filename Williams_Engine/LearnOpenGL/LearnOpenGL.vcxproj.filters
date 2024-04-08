@@ -57,6 +57,9 @@
     <ClInclude Include="src\enumerators\shader_type_enum.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="src\clases\headers\shaders_manager.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main\main.cpp">
@@ -86,8 +89,15 @@
     <ClCompile Include="src\clases\implementations\Objects\2D\triangle.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="src\clases\implementations\shaders_manager.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="dependences\lib\glfw3.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\shader.fs" />
+    <None Include="shaders\shader.vs" />
   </ItemGroup>
 </Project>

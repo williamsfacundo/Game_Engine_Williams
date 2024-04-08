@@ -22,18 +22,16 @@ namespace LearnOpenGL
 
 	ShaderProgram::~ShaderProgram()
 	{
-
+		
 	}
 
 	void ShaderProgram::useShader()
 	{
-
+		glUseProgram(programID);
 	}
 
-	StatusCorroborationEnum ShaderProgram::getSourceCodeFromFilePath(const char* shaderFilePath, const char* &resultingShaderCode)
+	StatusCorroborationEnum ShaderProgram::getSourceCodeFromFilePath(const char* shaderFilePath, string &resultingShaderCode)
 	{
-		string code;
-
 		ifstream shaderFile;
 
 		shaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
@@ -52,20 +50,19 @@ namespace LearnOpenGL
 			shaderFile.close();
 			
 			// convert stream into string
-			code = shaderStream.str();			
+			resultingShaderCode = shaderStream.str();
 		}
 		catch (ifstream::failure e)
 		{
 			cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << endl;
 
 			return StatusCorroborationEnum::FAILED;
-		}
-
-		resultingShaderCode = code.c_str();
+		}		
 		
 		return StatusCorroborationEnum::SUCCEDED;
 	}
 
+	//Para no usar la logica del enum podemos usar directamente un unsigned int (y pasar  GL_VERTEX_SHADER o GL_FRAGMENT_SHADER)
 	void ShaderProgram::shaderCompilation(unsigned int& shaderID, ShaderTypeEnum shaderType, const char* shaderSourceCode)
 	{	
 		int success;
@@ -105,13 +102,18 @@ namespace LearnOpenGL
 
 	void ShaderProgram::createShaderProgram(const char* vertexShaderPath, const char* fragmentShaderPath)
 	{
-		//Get shaders source code
-		const char* vertexShaderCode;
-		const char* fragmentShaderCode;
+		string vertexShaderstringSourceCode;
+		string fragmentShaderstringSourceCode;
 
-		getSourceCodeFromFilePath(vertexShaderPath, vertexShaderCode);
+		//Get shaders source code		
 
-		getSourceCodeFromFilePath(fragmentShaderPath, fragmentShaderCode);
+		getSourceCodeFromFilePath(vertexShaderPath, vertexShaderstringSourceCode);
+
+		getSourceCodeFromFilePath(fragmentShaderPath, fragmentShaderstringSourceCode);
+
+		//When assining the pointer of the string if we delete the string var the reference is lost (be careful)
+		const char* vertexShaderCode = vertexShaderstringSourceCode.c_str();
+		const char* fragmentShaderCode = fragmentShaderstringSourceCode.c_str();
 
 		//Shaders compilation
 

@@ -15,7 +15,11 @@ namespace LearnOpenGL
 	{
 		initialConfigs = nullptr;
 
-		window = nullptr;		
+		window = nullptr;
+
+		shaderManager = nullptr;
+
+		triangle = nullptr;
 	}
 
 	Program::~Program()
@@ -28,6 +32,16 @@ namespace LearnOpenGL
 		if(window != nullptr)
 		{
 			delete window;
+		}
+
+		if(shaderManager != nullptr)
+		{
+			delete shaderManager;
+		}
+
+		if(triangle != nullptr)
+		{
+			delete triangle;
 		}
 	}
 
@@ -69,7 +83,13 @@ namespace LearnOpenGL
 			delete initialConfigs;
 
 			initialConfigs = nullptr;
-		}		
+		}
+
+		//Shader manager initialization
+
+		shaderManager = new ShaderManager();
+
+		triangle = new Triangle(shaderManager->getShader());
 	}
 
 	void Program::renderingExecution()
@@ -97,7 +117,7 @@ namespace LearnOpenGL
 
 	void Program::renderCommands()
 	{
-
+		triangle->drawObject();
 	}
 
 	void Program::renderLoop()
